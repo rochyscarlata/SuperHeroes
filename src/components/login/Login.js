@@ -15,7 +15,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    fetch('http://challenge-react.alkemy.org/', {
+    fetch('https://challenge-react.alkemy.org/', {
       method: 'POST',
       headers: {
           'Accept': 'application/json',
