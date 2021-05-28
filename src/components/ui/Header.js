@@ -40,9 +40,9 @@ export default function Header() {
         className={`navbar-menu ${isActive ? "is-active" : ""}`}
       >
         <div className="navbar-start">
-          <NavLink className="navbar-item" to="./home">
+          {/* <NavLink className="navbar-item" to="./home">
             Home
-          </NavLink>
+          </NavLink> */}
           <NavLink className="navbar-item" to="./Heroes">
             Heroes
           </NavLink>

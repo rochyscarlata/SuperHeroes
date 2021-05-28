@@ -17,8 +17,9 @@ export default function DashboardRoutes ({history}) {
                 <Route exact path="/heroeView/:id" component={HeroeView}/>
                     <Redirect to="/login"/>
             </Switch>
+           
         </div>
-        <Footer/>
+        
         </>
     )
 }

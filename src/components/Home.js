@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import swal from "sweetalert";
 
 const Home = () => {
@@ -125,7 +125,7 @@ const Home = () => {
         <div class="columns is-mobile is-centered">
           <div class="column is-half">
             <div class="block">
-              <h3 className="title is-3 has-text-centered">
+              <h3 className="title is-3 ">
                 <strong>YOUR TEAM</strong>
               </h3>
             </div>
@@ -140,53 +140,56 @@ const Home = () => {
               </thead>
 
               <tbody>
-              {
-              equipo.map(chara => (
-                <tr>
-                  <th>
-                    <figure class="image is-64x64">
-                      <img
-                        class="is-rounded"
-                        src="https://bulma.io/images/placeholders/128x128.png"
-                      />
-                    </figure>
-                  </th>
-                  <td>{chara.name}</td>
-                  <td><span class="tag is-primary is-light">
-                            Intelligence: {chara.powerstats.intelligence}
-                          </span>
-                          <span class="tag is-link is-light">
-                            strength:{chara.powerstats.strength}
-                          </span>
-                          <span class="tag is-info is-light">
-                            Speed:{chara.powerstats.speed}
-                          </span>
-                          <span class="tag is-success is-light">
-                            Durability:{chara.powerstats.durability}
-                          </span>
-                          <span class="tag is-warning is-light">
-                            Power:{chara.powerstats.power}
-                          </span>
-                          <span class="tag is-danger is-light">
-                            {" "}
-                            Combat:{chara.powerstats.combat}
-                          </span></td>
-                  <td>
-                    <button
-                      class="button is-danger"
-                      onClick={() => sacarDelEquipo(chara)}
-                    >
-                      <span class="icon">
-                        <i class="fas fa-trash"></i>
+                {equipo.map((chara) => (
+                  <tr>
+                    <th>
+                      <figure class="image is-64x64">
+                        <img
+                          class="is-rounded"
+                          src="https://bulma.io/images/placeholders/128x128.png"
+                        />
+                      </figure>
+                    </th>
+                    <td>{chara.name}</td>
+                    <td>
+                      <span class="tag is-primary is-light">
+                        Intelligence: {chara.powerstats.intelligence}
                       </span>
-                    </button>
-                  </td>
-                </tr>
-                ))
-              }
+                      <span class="tag is-link is-light">
+                        strength:{chara.powerstats.strength}
+                      </span>
+                      <span class="tag is-info is-light">
+                        Speed:{chara.powerstats.speed}
+                      </span>
+                      <span class="tag is-success is-light">
+                        Durability:{chara.powerstats.durability}
+                      </span>
+                      <span class="tag is-warning is-light">
+                        Power:{chara.powerstats.power}
+                      </span>
+                      <span class="tag is-danger is-light">
+                        {" "}
+                        Combat:{chara.powerstats.combat}
+                      </span>
+                    </td>
+                    <td>
+                      <button
+                        class="button is-danger"
+                        onClick={() => sacarDelEquipo(chara)}
+                      >
+                        <span class="icon">
+                          <i class="fas fa-trash"></i>
+                        </span>
+                      </button>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
-
+            <div class="notification is-danger  is-light">
+            This section is not available yet, please go to 
+              <a href="./heroes"> heroes</a> 
+            </div>
             <div>
               <br></br>
             </div>

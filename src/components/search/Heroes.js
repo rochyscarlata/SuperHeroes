@@ -63,9 +63,18 @@ export default class Search extends Component {
       }
     });
   };
+
+  addToTeam(){
+    swal({
+      title: "Sorry!",
+      text: "This action is not available yet!",
+      icon: "error",
+    });
+  }
+  
   render() {
     return (
-      <div>
+     
         <div className="container is-max-desktop">
           <div className="container is-mobile">
             <div class="columns is-mobile is-centered">
@@ -83,6 +92,7 @@ export default class Search extends Component {
                     aria-label="close"
                   ></button>
                 </div>
+                
                 <form
                   className="search"
                   onSubmit={this.searchChar}
@@ -94,7 +104,7 @@ export default class Search extends Component {
                         className="input"
                         type="text"
                         autoComplete="off"
-                        placeholder="Find your hero"
+                        placeholder="Seeks a hero"
                         id="searchInput"
                       />
                     </div>
@@ -116,7 +126,7 @@ export default class Search extends Component {
               </div>
             </div>
           </div>
-        </div>
+        
         
         <section class="section is-small">
           <div className="container is-max-desktop ">
@@ -134,8 +144,8 @@ export default class Search extends Component {
                           />
                         </header>
                         <div class="card-content">
-                          <h2 className="title is-2">{chara.name}</h2>
-                          <h3 className="title is-3">{chara.biography.alignment}</h3>
+                          <h4 className="title is-4">{chara.name}</h4>
+                          <h4 className="subtitle">{chara.biography.alignment}</h4>
                           <p class="card-header-title">Powerstats: </p>
                           <span class="tag is-primary is-light">
                             Intelligence: {chara.powerstats.intelligence}

@@ -7,13 +7,14 @@ const HeroeView = ({history}) => {
   const { id } = useParams();
   console.log(id);
   const [chara, setChara] = useState([]);
+  const apiKey = "10226116298680536";
 
   
   // por el id obtengo los datos
   useEffect(() => {
     const dataHero = async () => {
       const data = await fetch(
-        `https://www.superheroapi.com/api/921664605275424/${id}`
+        `https://www.superheroapi.com/api/${apiKey}/${id}`
       );
       const res = await data.json();
       setChara(res);
