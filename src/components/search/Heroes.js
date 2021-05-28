@@ -31,7 +31,7 @@ export default class Search extends Component {
         return Qs.stringify(params, { arrayFormat: "brackets" });
       },
       params: {
-        reqUrl: `http://superheroapi.com/api/${apiKey}/search/${charString}`,
+        reqUrl: `https://superheroapi.com/api/${apiKey}/search/${charString}`,
       },
       xmlToJSON: false,
     }).then((res) => {

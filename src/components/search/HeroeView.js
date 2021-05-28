@@ -14,7 +14,8 @@ const HeroeView = ({history}) => {
   useEffect(() => {
     const dataHero = async () => {
       const data = await fetch(
-        `https://www.superheroapi.com/api/${apiKey}/${id}`
+        `https://www.superheroapi.com/api/${apiKey}/${id}`,{ mode: 'no-cors'}
+        
       );
       const res = await data.json();
       setChara(res);
