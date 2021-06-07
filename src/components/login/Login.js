@@ -10,36 +10,36 @@ const Login = () => {
 
   const history = useHistory();
 
-  // no funciona pero es la funcion del login
-
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    fetch('https://challenge-react.alkemy.org/', {
-      method: 'POST',
-      headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-          email: email,
-          password: password,
-      })
-  }).then(res => {
-      return res.json()
-  }).then(res => {
-      if(res["error"]){swal({
-        title: "Error!",
-        text: "Email or password invalid",
-        icon: "error",
-      });}
-      else{
-          localStorage.setItem('token', res["token"]);
+   const handleLogin = () =>{
+    history.push("/heroes")
+   }
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+  //   fetch('https://challenge-react.alkemy.org/', {
+  //     method: 'POST',
+  //     headers: {
+  //         'Accept': 'application/json',
+  //         'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({
+  //         email: email,
+  //         password: password,
+  //     })
+  // }).then(res => {
+  //     return res.json()
+  // }).then(res => {
+  //     if(res["error"]){swal({
+  //       title: "Error!",
+  //       text: "Email or password invalid",
+  //       icon: "error",
+  //     });}
+  //     else{
+  //         localStorage.setItem('token', res["token"]);
           
-          history.push("/home")
-      }
-  })
-  }
+  //         history.push("/home")
+  //     }
+  // })
+  // }
   //   const data = { email, password };
 
    

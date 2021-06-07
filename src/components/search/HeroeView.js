@@ -9,12 +9,12 @@ const HeroeView = ({history}) => {
   const [chara, setChara] = useState([]);
   const apiKey = "10226116298680536";
 
-  
+  const url =  "https://www.superheroapi.com/api.php";
   // por el id obtengo los datos
   useEffect(() => {
     const dataHero = async () => {
       const data = await fetch(
-        `https://www.superheroapi.com/api/${apiKey}/${id}`,{ mode: 'no-cors'}
+        `${url}/${apiKey}/${id}`
         
       );
       const res = await data.json();
@@ -25,7 +25,7 @@ const HeroeView = ({history}) => {
   }, [id]);
 
   function handleReturn(){
-      history.goBack();
+      history.push('/heroes');
   }
 
   return (

@@ -43,7 +43,7 @@ export default function Header() {
           {/* <NavLink className="navbar-item" to="./home">
             Home
           </NavLink> */}
-          <NavLink className="navbar-item" to="./Heroes">
+          <NavLink className="navbar-item" to="/Heroes">
             Heroes
           </NavLink>
         </div>
